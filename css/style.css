@@ -1,32 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import "reset.css";
+@import "variable.css";
+@import "status-bar.css";
 
 body {
   font-family: "Open Sans", sans-serif;
 }
 
-.status-bar {
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
   display: flex;
-  justify-content: center;
-}
-.status-bar__column {
-  width: 33%;
-}
-
-.status-bar__column:first-child span {
-  margin-right: 5px;
-}
-
-.status-bar__column:nth-child(2) {
-  display: flex;
-  justify-content: center;
-}
-
-.status-bar__column:last-child {
-  display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
   align-items: center;
 }
 
-.status-bar__column .fa-battery-full {
-  margin: 0px 5px;
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.welcome-header__text {
+  width: 50%;
+  opacity: 0.55;
+  font-weight: 400;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+/* 사실 여기서는 input의 폼 자체를 정해주는 게 좋다고 생각이 됨. */
+
+#login-form input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  padding: 15px 0px;
+  font-size: 18px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+#login-form input:focus {
+  border-color: var(--yellow);
 }
