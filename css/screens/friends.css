@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  margin-top: -15px;
 }
 
 .friends-screen {
@@ -33,7 +34,7 @@
 
 .friends-screen__channel {
   margin-top: 20px;
-  border-top: 1px solid rgba(71, 42, 42, 0.2);
+  border-top: var(--main-border);
   padding-top: 15px;
 }
 
